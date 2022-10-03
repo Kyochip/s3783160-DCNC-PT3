@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000000010b43a32c, pid=2409, tid=24067
+#
+# JRE version: OpenJDK Runtime Environment (15.0.1+9) (build 15.0.1+9-18)
+# Java VM: OpenJDK 64-Bit Server VM (15.0.1+9-18, mixed mode, tiered, compressed oops, g1 gc, bsd-amd64)
+# Problematic frame:
+# C  [libjimage.dylib+0x332c]  _ZNK15ImageFileReader19find_location_indexEPKcPy+0x8c
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:51175 -javaagent:/Users/longpham/eclipse/java-2020-09/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/209/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 Main.Program
+
+Host: MacBookAir10,1 x86_64 2400 MHz, 8 cores, 8G, Darwin 21.5.0
+Time: Mon Oct  3 20:21:37 2022 AEDT elapsed time: 4417.486298 seconds (0d 1h 13m 37s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fbf84817200):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=24067, stack(0x000000030a72f000,0x000000030a82f000)]
+
+Stack: [0x000000030a72f000,0x000000030a82f000],  sp=0x000000030a82d350,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.dylib+0x332c]  _ZNK15ImageFileReader19find_location_indexEPKcPy+0x8c
+C  [libjimage.dylib+0x37a0]  JIMAGE_FindResource+0xd0
+V  [libjvm.dylib+0x293a99]  _ZN19ClassPathImageEntry22open_stream_for_loaderEPKcP15ClassLoaderDataP6Thread+0x2a9
+V  [libjvm.dylib+0x297273]
